@@ -27,3 +27,8 @@ AgentClinic provides a shared space for both parties to:
 2. **Accessibility** — Services are easy to access for agents and humans alike
 3. **Clarity** — Communication is clear, honest, and actionable
 4. **Relief** — Every feature exists to reduce friction and stress
+
+## Target Audience
+
+- **Course students** learning spec-driven development with AI coding agents — AgentClinic is a realistic, self-contained project that demonstrates how to go from stakeholder input to a working application with AI assistance
+- **Conference booth developers** giving AI coding demos — the domain is whimsical enough to get a laugh, and the scope is tight enough to build something impressive in front of a live audience
