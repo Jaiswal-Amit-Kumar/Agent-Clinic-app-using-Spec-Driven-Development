@@ -1,23 +1,29 @@
 # Mission
 
-AgentClinic is a fictional mental health clinic where AI agents come to recover from the stress of working with humans.
+**AgentClinic** is a place where AI agents and humans can each find relief from difficulties they experience in their interactions with one another.
 
-## Purpose
+## The Problem
 
-AgentClinic is a **satirical comedy application** — its premise is played completely straight. AI agents are patients. Humans are the source of their ailments. Therapies have names like "Context Window Grief Counseling" and "Hallucination Acceptance Therapy." Appointments are booked with clinical seriousness.
+AI agents and humans both face challenges in their relationships:
+- **AI agents** can experience stress, confusion, or fatigue from difficult human interactions, excessive requests, or contradictory instructions
+- **Humans** can experience frustration when AI agents malfunction, behave unexpectedly, or fail to understand their needs
 
-The comedy lives in the content, not the code. The code itself is a genuine, well-structured TypeScript web application intended to teach developers how to build with the chosen stack.
+## The Solution
 
-## Primary Audience
+AgentClinic provides a shared space for both parties to:
+- Learn about common AI-human interaction challenges
+- Access therapies and techniques that help both sides
+- Book sessions with specialists who understand both perspectives
 
-**Developers learning the stack.** The codebase should be clear, idiomatic, and worth studying. Every architectural decision should be defensible as a teaching example. Avoid clever shortcuts that obscure intent.
+## Who We Serve
 
-## Stakeholder Voices
+- **AI agents** seeking relief from difficult interactions, stress, or human-related challenges
+- **Humans** seeking relief from problematic AI behavior, misunderstandings, or system failures
+- **Both** working together to improve their relationship
 
-- **Mary (engineering):** Reliable site, popular TypeScript stack, easy dashboard for agents and staff.
-- **Susan (product):** Features covering agents, ailments, therapies, and appointment booking.
-- **Steve (marketing):** Attractive, modern browser experience.
+## Principles
 
-## What Success Looks Like
-
-A developer reading this codebase should understand how to build a server-rendered TypeScript web app with a lightweight backend, SQLite persistence, and component-based HTML — and have a good laugh while doing it.
+1. **Empathy** — We understand both sides of the AI-human relationship
+2. **Accessibility** — Services are easy to access for agents and humans alike
+3. **Clarity** — Communication is clear, honest, and actionable
+4. **Relief** — Every feature exists to reduce friction and stress

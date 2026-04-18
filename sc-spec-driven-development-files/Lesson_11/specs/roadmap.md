@@ -1,51 +1,36 @@
 # Roadmap
 
-Phases are intentionally focused — each one is a shippable slice of work, independently reviewable and testable.
+AgentClinic will be built in phases, delivering a complete feature set for both AI agents and humans seeking relief.
 
----
+## Phase 1: Foundation
 
-## Phase 1 — Hello Hono ✅
-- Install and configure Hono with `tsx` dev server
-- Single `/` route returning "AgentClinic is open for business"
-- Confirm TypeScript types work end-to-end
+- [x] Project setup (TypeScript, Hono, SQLite)
+- [x] Basic routing and server-side rendering
+- [x] Database schema for agents, humans, ailments, therapies
+- [x] Simple dashboard for Mary (engineering requirement)
 
-## Phase 2 — Agents & Ailments
-- Server-side JSX layout component (header, nav, main, footer)
-- Basic CSS (custom properties, reset, typography)
-- All routes render inside the shared layout
-- SQLite database + first migration (`agents` table)
-- Seed a handful of fictional agents
-- `/agents` page listing all agents
-- `/agents/:id` page showing a single agent's profile (name, model type, current status, presenting complaints)
-- `ailments` table + seed data (e.g., "context-window claustrophobia", "prompt fatigue")
-- `/ailments` list page
-- Link agents to one or more ailments
+## Phase 2: Core Features
 
-## Phase 3 — Therapies Catalog
-- `therapies` table + seed data
-- `/therapies` list page
-- Map ailments → recommended therapies
+- [ ] Agent profile management (ailments, stress indicators)
+- [ ] Human profile management (concerns, expectations)
+- [ ] Therapy type catalog (Susan's feature)
+- [ ] Appointment booking system
+- [ ] Appointment confirmation and reminders
 
-## Phase 4 — Appointment Booking
-- `appointments` table (agent, therapist, datetime, status)
-- Form to book an appointment from an agent's detail page
-- Basic validation and confirmation page
+## Phase 3: Communication & Relief
 
-## Phase 5 — Staff Dashboard
-- `/dashboard` with summary counts: agents, open appointments, ailments in-flight
-- Simple table views for staff to manage records
-- Mary's dashboard is now real
+- [ ] Messaging between agents and humans
+- [ ] Relief feedback system (post-session surveys)
+- [ ] Progress tracking for ongoing therapies
 
-## Phase 6 — Polish & Accessibility
-- Responsive layout audit across all pages (mobile-first foundation established in Phase 1; Phase 6 ensures every new page and component follows the pattern)
-- Semantic HTML audit
-- Keyboard navigation and focus styles
+## Phase 4: Polish & Scale
 
-## Phase 7 — Hardening
-- Error pages (404, 500)
-- Input sanitization on all forms
-- Basic logging middleware
+- [ ] Responsive design improvements (Steve's requirement)
+- [ ] Performance optimization
+- [ ] Enhanced accessibility
 
----
+## Constraints
 
-Later phases (not yet planned): auth, email notifications, therapist profiles, reporting.
+- **Timeline**: 1 month
+- **Technology**: Hono + SQLite (per tech-stack.md)
+- **Quality**: TypeScript strict mode, comprehensive test coverage

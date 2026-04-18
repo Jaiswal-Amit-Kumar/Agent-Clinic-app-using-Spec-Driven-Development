@@ -1,61 +1,36 @@
 # Roadmap
 
-Phases are intentionally small — each should be implementable in one focused session.
+AgentClinic will be built in phases, delivering a complete feature set for both AI agents and humans seeking relief.
 
----
+## Phase 1: Foundation
 
-## Phase 1: Feedback Form (Complete)
+- [x] Project setup (TypeScript, Hono, SQLite)
+- [x] Basic routing and server-side rendering
+- [x] Database schema for agents, humans, ailments, therapies
+- [x] Simple dashboard for Mary (engineering requirement)
 
-**Goal:** Let visitors submit feedback about the clinic.
+## Phase 2: Core Features
 
-- [x] Add `feedback` table to the database schema (migration)
-- [x] Seed a few example feedback entries
-- [x] Build `FeedbackForm` component (name, message fields)
-- [x] Add POST route to handle form submission and persist to DB
-- [x] Add `FeedbackList` component to display submitted feedback
-- [x] Wire up a `/feedback` page with form + list
-- [x] Link `/feedback` from the site navigation
+- [ ] Agent profile management (ailments, stress indicators)
+- [ ] Human profile management (concerns, expectations)
+- [ ] Therapy type catalog (Susan's feature)
+- [ ] Appointment booking system
+- [ ] Appointment confirmation and reminders
 
----
+## Phase 3: Communication & Relief
 
-## Phase 2: About Us Page — Content
+- [ ] Messaging between agents and humans
+- [ ] Relief feedback system (post-session surveys)
+- [ ] Progress tracking for ongoing therapies
 
-**Goal:** Give the clinic a real identity with static content.
+## Phase 4: Polish & Scale
 
-- [ ] Create an `AboutUs` page component
-- [ ] Write satirical clinic history, staff bios, and "founding story"
-- [ ] Add `/about` route
-- [ ] Link `/about` from navigation
+- [ ] Responsive design improvements (Steve's requirement)
+- [ ] Performance optimization
+- [ ] Enhanced accessibility
 
----
+## Constraints
 
-## Phase 3: About Us Page — Map
-
-**Goal:** Show the clinic's location on a map.
-
-- [ ] Decide on map embed approach (static image vs. iframe vs. API)
-- [ ] Add address display to the About Us page
-- [ ] Embed map on the page
-- [ ] Ensure it degrades gracefully without JavaScript
-
----
-
-## Phase 4: Customer Reviews — Display
-
-**Goal:** Show patient testimonials on the site.
-
-- [ ] Add `reviews` table to schema (migration)
-- [ ] Seed a handful of satirical patient reviews
-- [ ] Build `ReviewsList` component
-- [ ] Add `/reviews` page
-
----
-
-## Phase 5: Customer Reviews — Submission
-
-**Goal:** Let agents (and curious humans) submit reviews.
-
-- [ ] Build `ReviewForm` component (agent name, rating, comment)
-- [ ] Add POST route to persist new reviews
-- [ ] Display submitted reviews on `/reviews`
-- [ ] Basic validation (required fields, rating range)
+- **Timeline**: 1 month
+- **Technology**: Hono + SQLite (per tech-stack.md)
+- **Quality**: TypeScript strict mode, comprehensive test coverage

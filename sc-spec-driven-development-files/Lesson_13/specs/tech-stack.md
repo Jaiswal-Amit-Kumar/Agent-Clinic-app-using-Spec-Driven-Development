@@ -1,51 +1,48 @@
 # Tech Stack
 
-## Language & Runtime
+AgentClinic is a server-side TypeScript application. All rendering happens on the server; the browser receives plain HTML that works well and looks good.
 
-- **TypeScript 5.5** — strict mode, compiled with `tsc`
-- **Node.js** — runtime via `@hono/node-server`
-- **tsx** — TypeScript execution for development watch mode (`tsx watch`)
+## Core
 
-## Backend / API Layer
+| Layer | Choice | Rationale |
+|---|---|---|
+| Language | TypeScript | Type safety end-to-end; satisfies Mary's requirement |
+| Runtime | Node.js | Stable, well-supported, vast ecosystem |
+| Server framework | **Hono** | Lightweight, TypeScript-first, fast, excellent DX; routes and middleware feel natural |
+| Templating | Hono JSX (server-side) | JSX without React overhead; components are just functions |
+| CSS | Plain CSS + CSS custom properties | No build step required; Steve gets a modern, attractive result |
 
-- **Hono 4.x** — lightweight, fast web framework
-  - Routes defined in `src/routes/` (agents, ailments, therapies, appointments, dashboard)
-  - Middleware in `src/middleware/` (logger)
-  - No REST/GraphQL/tRPC abstraction — Hono routing is the API layer
+## Why Hono
 
-## Frontend
+[Hono](https://hono.dev) is chosen over Express/Fastify because:
 
-- **Hono JSX** — server-side rendering via `.tsx` components; no client-side framework
-  - Components live in `src/components/`
-  - Pages live in `src/pages/`
-  - No hydration, no JavaScript bundle sent to the browser
-- **Vanilla CSS** — single stylesheet at `static/style.css`
+- First-class TypeScript with zero config
+- Built-in JSX renderer for server-side HTML
+- Middleware model is simple and composable
+- Runs on Node, Deno, Bun, and edge runtimes without changes
 
-## Database / Persistence
+## Data
 
-- **SQLite** — via `better-sqlite3` (synchronous, embedded)
-  - Database file: `agentclinic.db`
-  - Schema managed by `src/db/migrate.ts` (hand-written migrations, no ORM)
-  - Seed data via `src/db/seed.ts` / `npm run seed`
-  - Types defined in `src/db/types.ts`
+- **SQLite** (via `better-sqlite3`) for local development and early production — simple, embedded, no infrastructure
+- Migrations via plain SQL files; no ORM to start
+- Supports both agent and human user records, appointment bookings, and therapy session data
 
 ## Testing
 
-- **Vitest 4.x** — test runner
-  - `tests/app.test.tsx` — route/integration tests
-  - `tests/components.test.tsx` — component rendering tests
-  - `tests/db.test.ts` — database layer tests
-  - Run with `npm test` (`vitest run --passWithNoTests`)
+- **Vitest** — fast, TypeScript-native, compatible with the rest of the stack
 
 ## Tooling
 
-- **TypeScript compiler** — `npm run build` (compile), `npm run typecheck` (check only)
-- **tsx** — `npm run dev` (watch mode, no compile step needed)
-- No linter or formatter currently configured
+- `tsx` for development (run TypeScript directly, no build step needed)
+- `tsc` for production builds
+- `prettier` for formatting
 
-## Gaps / Future Considerations
+## Browser Support
 
-- No linter (ESLint) or formatter (Prettier) — worth adding for a teaching codebase
-- No ORM — direct SQL is intentional for clarity, but could introduce Drizzle/Kysely later
-- No CI pipeline defined
-- No client-side interactivity layer — if forms need progressive enhancement, consider HTMX
+Target: Last 2 versions of Chrome, Firefox, Safari, and Edge (modern browsers as per Steve's requirement).
+
+## What We Are Not Using
+
+- No React, Vue, or Svelte — server-side rendering keeps the stack simple
+- No ORM — SQL is sufficient at this scale
+- No Docker — not yet; that's a later phase concern

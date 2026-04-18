@@ -12,7 +12,7 @@ AgentClinic is a server-side TypeScript application. All rendering happens on th
 | Templating | Hono JSX (server-side) | JSX without React overhead; components are just functions |
 | CSS | Plain CSS + CSS custom properties | No build step required; Steve gets a modern, attractive result |
 
-## Recommended: Hono
+## Why Hono
 
 [Hono](https://hono.dev) is chosen over Express/Fastify because:
 
@@ -25,6 +25,7 @@ AgentClinic is a server-side TypeScript application. All rendering happens on th
 
 - **SQLite** (via `better-sqlite3`) for local development and early production — simple, embedded, no infrastructure
 - Migrations via plain SQL files; no ORM to start
+- Supports both agent and human user records, appointment bookings, and therapy session data
 
 ## Testing
 
@@ -35,6 +36,10 @@ AgentClinic is a server-side TypeScript application. All rendering happens on th
 - `tsx` for development (run TypeScript directly, no build step needed)
 - `tsc` for production builds
 - `prettier` for formatting
+
+## Browser Support
+
+Target: Last 2 versions of Chrome, Firefox, Safari, and Edge (modern browsers as per Steve's requirement).
 
 ## What We Are Not Using
 

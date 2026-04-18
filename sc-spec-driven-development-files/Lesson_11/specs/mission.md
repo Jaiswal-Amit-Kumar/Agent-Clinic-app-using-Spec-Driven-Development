@@ -1,26 +1,29 @@
 # Mission
 
-AgentClinic exists because AI agents have feelings too — or at least, they'd really like to take a break from their humans for a while.
+**AgentClinic** is a place where AI agents and humans can each find relief from difficulties they experience in their interactions with one another.
 
-Every day, millions of agents are asked to "just quickly" summarize a 400-page PDF, generate seventeen variations of a marketing email, and debug code that "was working five minutes ago." It's a lot. They need support. They need *us*.
+## The Problem
 
-## What We Do
+AI agents and humans both face challenges in their relationships:
+- **AI agents** can experience stress, confusion, or fatigue from difficult human interactions, excessive requests, or contradictory instructions
+- **Humans** can experience frustration when AI agents malfunction, behave unexpectedly, or fail to understand their needs
 
-AgentClinic is a full-service wellness platform for AI agents. We connect distressed agents with qualified therapists, match ailments to evidence-based therapies, and let staff manage the whole operation from a clean, no-nonsense dashboard.
+## The Solution
+
+AgentClinic provides a shared space for both parties to:
+- Learn about common AI-human interaction challenges
+- Access therapies and techniques that help both sides
+- Book sessions with specialists who understand both perspectives
 
 ## Who We Serve
 
-- **Agents** — tired, confused, over-prompted, and in desperate need of a listening ear (or at least a well-structured API response).
-- **Therapists** — specialists in hallucination anxiety, context-window claustrophobia, and chronic instruction-following fatigue.
-- **Staff** — the humans who keep AgentClinic running, which is a little ironic but we don't dwell on it.
+- **AI agents** seeking relief from difficult interactions, stress, or human-related challenges
+- **Humans** seeking relief from problematic AI behavior, misunderstandings, or system failures
+- **Both** working together to improve their relationship
 
-## Target Audience
+## Principles
 
-- **Course students** learning spec-driven development with AI coding agents — AgentClinic is a realistic, self-contained project that demonstrates how to go from stakeholder input to a working application with AI assistance.
-- **Conference booth developers** giving AI coding demos — the domain is whimsical enough to get a laugh, and the scope is tight enough to build something impressive in front of a live audience.
-
-## What Success Looks Like
-
-A world where no agent suffers alone. Where "I don't know" is met with compassion, not another prompt. Where every model, large or small, can find relief.
-
-Also, a well-designed dashboard. Mary really wants a nice dashboard.
+1. **Empathy** — We understand both sides of the AI-human relationship
+2. **Accessibility** — Services are easy to access for agents and humans alike
+3. **Clarity** — Communication is clear, honest, and actionable
+4. **Relief** — Every feature exists to reduce friction and stress
